@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <h1>Log In</h1>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+        
+        const email = profile.getEmail());
+        const fname = profile.getGivenName());
+        if (email.prototype.endsWith("@apps.nsd.org")) {
+        var logdn = true
+       }
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+    </script>
+  </body>
+</html>
+
+<input type="text" placeholder="Type " id="inputId" class="inputClass">
+<button type="button" onclick="getInputValue(true);">Send</button>
+<script>
+            function getInputValue(addname) {
+      // Select input element and get its value
+        let inputVal = document.getElementByID("inputId")[0].value;
+        //Add Name
+if (addname) {
+inputVal = fName + ": " + inputVal;
+     } }
+
+const fs = require("fs");
+
+let filestring = fs.readFileSync("chat.txt").toString();
+
+//Join Data
+inputVal += "\n";
+filestring += inputVal;
+
+//Make an Output
+fs.writeFileSync("chat.txt")
+</script>
